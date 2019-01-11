@@ -1,0 +1,23 @@
+{
+  "name": "unger_helen_avapp",
+  "version": "1.0.0",
+  "description": "audio and video web application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HelenUnger/AVAPP.git"
+  },
+  "author": "Helen Unger",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HelenUnger/AVAPP/issues"
+  },
+  "homepage": "https://github.com/HelenUnger/AVAPP#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2"
+  }
+}
