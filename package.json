@@ -4,7 +4,8 @@
   "description": "audio and video web application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch-sass": "sass --watch public/sass/main.scss:public/css/main.css --style compressed"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,6 @@
   },
   "homepage": "https://github.com/HelenUnger/AVAPP#readme",
   "devDependencies": {
-    "gulp": "^4.0.0",
-    "gulp-sass": "^4.0.2"
+    "sass": "^1.16.0"
   }
 }
