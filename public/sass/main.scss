@@ -94,11 +94,11 @@ header{
             flex-wrap: nowrap;
             overflow-x: scroll;
             
-           .movie-preview{
+           .movie-preview, .music-preview{
                 margin: 15px;
                 position: relative;
                 
-                .movie-info{
+                .movie-info, .music-info{
                     background-color: rgba(119, 119, 119, 0.8);
                     color: white;
                     text-decoration: none;
@@ -126,5 +126,11 @@ header{
         }
     }
 
+    .music-info{
+        width: 150px !important;
+        h4{
+            font-size: 1.2em !important;
+        }
+    }
     
 }
