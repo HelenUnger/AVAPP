@@ -1,23 +1,25 @@
 {
-  "name": "unger_helen_avapp",
+  "name": "inclass_vue_components",
   "version": "1.0.0",
-  "description": "audio and video web application",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch-sass": "sass --watch public/sass/main.scss:public/css/main.css --style compressed"
+    "watch-sass": "sass --watch sass/master.scss:css/master.css --style compressed"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HelenUnger/AVAPP.git"
+    "url": "git+https://github.com/HelenUnger/INCLASS_vue_components.git"
   },
   "author": "Helen Unger",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/HelenUnger/AVAPP/issues"
+    "url": "https://github.com/HelenUnger/INCLASS_vue_components/issues"
   },
-  "homepage": "https://github.com/HelenUnger/AVAPP#readme",
+  "homepage": "https://github.com/HelenUnger/INCLASS_vue_components#readme",
   "devDependencies": {
-    "sass": "^1.16.0"
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.2"
   }
 }
