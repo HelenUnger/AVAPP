@@ -28,10 +28,6 @@
             navTrue: false,
             auth: false,
             admin: false,
-            fakeAccount: {
-                username: "user",
-                password: "pass"
-            },
             currentuser: []
         },
 
@@ -52,10 +48,6 @@
         },
 
         methods: {
-            calledOnParent(){
-                console.log("this method lives in the main VM and was called from a component");
-            },
-
             setAuth(status){
                 this.auth = status;
             },

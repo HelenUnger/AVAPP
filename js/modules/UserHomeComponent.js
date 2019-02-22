@@ -3,7 +3,7 @@ export default {
 
     template: `
     <div class="container">
-        <h2 v-if="currentuser">{{message}} {{currentuser.username}}</h2>
+        <h2 v-if="this.$parent.currentuser">{{message}} {{this.$parent.currentuser.username}}</h2>
     </div>
     `,
 
@@ -15,10 +15,13 @@ export default {
 
     created: function() {
         console.log('params:', this.$route.params);
-        if (this.currentuser.admin == 1){
-            this.$parent.admin = true;
-        }else{
-            this.$parent.admin = false;
+
+        if (this.$parent.currentuser.admin == false){
+            if (this.currentuser.admin == 1){
+                this.$parent.admin = true;
+            }else{
+                this.$parent.admin = false;
+            }
         }
 
         this.$parent.currentuser = this.currentuser;
