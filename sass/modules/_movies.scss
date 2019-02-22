@@ -1,0 +1,13 @@
+.movie-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    .movie-box{
+    max-width: 140px;
+    text-align: center;
+    }
+}
+
+.watch-container{
+    text-align: center;
+}

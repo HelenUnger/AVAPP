@@ -2,13 +2,19 @@
     //import components
     //exaclty like php include
 
-    import LoginComponent from '../js/modules/LoginComponent.js';
-    import UsersComponent from '../js/modules/UsersComponent.js';
+    import LoginComponent from './modules/LoginComponent.js';
+    import UsersComponent from './modules/UsersComponent.js';
+    import UserHomeComponent from './modules/UserHomeComponent';
+    import UserMovieComponent from './modules/UserMovieComponent';
+    import WatchComponent from './modules/WatchComponent';
 
     const routes = [
         {path: '/', redirect: {name: 'login'} },
         {path: '/login', name: 'login', component: LoginComponent },
-        {path: '/users', name: 'users', component: UsersComponent }
+        {path: '/users', name: 'users', component: UsersComponent },
+        {path: '/home', name: "home", component: UserHomeComponent, props: true },
+        {path: '/movies', name: "movies", component: UserMovieComponent, props: true },
+        {path: '/watch', name: "watch", component: WatchComponent, props: true}
     ]
 
     const router = new VueRouter({
@@ -19,11 +25,30 @@
     const vm = new Vue({
         data: {
             testmessage: "sup",
+            navTrue: false,
             auth: false,
+            admin: false,
             fakeAccount: {
                 username: "user",
                 password: "pass"
-            }
+            },
+            currentuser: []
+        },
+
+        created: function(){
+            //  // do a session check and set authenticated to true if the session still exists
+            // // if the cached user exists, then just navigate to their user home page
+
+            // // the localstorage session will persist until logout
+
+            // if (localStorage.getItem("cachedUser")) {
+            //     let user = JSON.parse(localStorage.getItem("cachedUser"));
+            //     this.auth = true;
+        
+            //     this.$router.push({ name: "home", params: { currentuser: user }});
+            // }
+        
+            // // NOTE -> change this on login to localstorate session instead
         },
 
         methods: {
@@ -38,6 +63,10 @@
             logOut() {
                 this.$router.push({ path: '/login' });
                 this.auth = false;
+            },
+
+            toggleNav(){
+                this.navTrue = (!this.navTrue) ? true : false;
             }
         },
 

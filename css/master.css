@@ -1,2 +1,225 @@
-*{border:0;padding:0;margin:0}html{position:relative;min-height:100%}body{font-family:Broadway, sans-serif;background-color:#1e1e1e;color:white}a{color:white;text-decoration:none}header{background-color:#191919;position:fixed;z-index:100;width:100%;height:80px;top:0}nav ul{right:3em;list-style-type:none;margin-bottom:0}nav ul li{display:inline-block;font-size:1.75em;padding:0 0.2em;cursor:pointer}.content{margin-top:100px}.login_form{text-align:center;width:100%}.login_form form{background-color:#191919;width:50%;font-size:1.5em;margin:0 auto}.login_form input{display:block;margin:10px auto}footer{position:absolute;bottom:0;width:100%;height:80px;background-color:#191919}
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Broadway', sans-serif;
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+.content {
+  margin-top: 70px;
+  margin-bottom: 80px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+header {
+  background-color: transparent;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 50px;
+  top: 0;
+}
+
+.menu {
+  display: none;
+}
+
+.show {
+  display: block !important;
+}
+
+.line {
+  border-bottom: #000 2px solid;
+  width: 90%;
+  margin: 15px auto;
+}
+
+.ham-menu, .exit {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5em;
+  max-width: 24px;
+}
+
+.nav-content {
+  width: 65%;
+  height: 100vh;
+  background-color: #d0d0d0;
+  position: absolute;
+  top: 0;
+  right: -65%;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  padding-top: 50px;
+  font-size: 1.5em;
+}
+
+.nav-content ul li {
+  list-style: none;
+  margin-left: 10px;
+  padding: 10px;
+}
+
+.nav-content ul li svg {
+  margin: 0 10px;
+  max-width: 24px;
+}
+
+.links li:nth-of-type(1):hover {
+  background-color: #EF3C95;
+}
+
+.links li:nth-last-of-type(1):hover {
+  background-color: #b34edb;
+}
+
+.links .settings:hover {
+  background-color: orange;
+}
+
+.openNav {
+  right: 0;
+}
+
+.content-type li:nth-of-type(1):hover {
+  background-color: #31C82C;
+}
+
+.content-type li:nth-of-type(2):hover {
+  background-color: #F6DB2B;
+}
+
+.content-type li:nth-of-type(3):hover {
+  background-color: #199FE5;
+}
+
+.login_form {
+  text-align: center;
+  width: 100%;
+  font-size: 1.2em;
+}
+
+.login_form .login-errors {
+  height: 50px;
+  width: 80%;
+  display: block;
+  margin: 10px auto;
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+.login_form form {
+  background-color: #dddddd;
+  width: 80%;
+  margin: 10px auto;
+  padding: 5%;
+}
+
+.login_form input, .login_form button {
+  display: block;
+  margin: 10px auto;
+  font-size: 1em;
+}
+
+.login_form button {
+  background-color: #7408bd;
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.movie-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.movie-container .movie-box {
+  max-width: 140px;
+  text-align: center;
+}
+
+.watch-container {
+  text-align: center;
+}
+
+.comp-container h1 {
+  text-align: center;
+}
+
+.comp-container .users-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.5em;
+}
+
+.comp-container .user {
+  width: 45%;
+  margin: 1%;
+}
+
+.comp-container .user img {
+  max-width: 100%;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+footer .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 50px;
+  justify-items: center;
+  list-style: none;
+  margin: 0 1%;
+}
+
+footer .social li {
+  margin: 0 10%;
+}
 /*# sourceMappingURL=master.css.map */
