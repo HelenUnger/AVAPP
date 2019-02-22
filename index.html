@@ -27,15 +27,16 @@
           
           <div class="nav-content" :class="{openNav : navTrue}">
               <div v-on:click="toggleNav" class="exit"><i class="fas fa-times"></i></div>
-              <ul class="links">
-                  <!-- <li>Kids</li> -->            
-                  <li v-if="auth"><i class="fas fa-user-circle"></i>Account</li>
-                  <li class="settings" v-if="admin"><i class="fas fa-cog"></i>Settings</li>
-                  <li v-if="auth" v-on:click="logOut()"><i class="fas fa-sign-out-alt"></i>Logout</li>
+              <ul class="links">       
+                  <li v-on:click.prevent="toggleNav"><i class="fas fa-user-circle"></i>Account</li>
+                  <li class="settings" v-if="admin" v-on:click.prevent="toggleNav"><i class="fas fa-cog"></i>Settings</li>
+                  <li v-on:click.prevent="toggleNav"><router-link :to="{ path: 'users' }"><i class="fas fa-user-circle"></i>Switch Users</router-link></li>
+                  <li  v-on:click="toggleNav(); logOut();"><i class="fas fa-sign-out-alt"></i>Logout</li>
               </ul>
               <div class="line"></div>
               <ul class="content-type">
-                  <li><router-link :to="{ path: 'movies', params: {currentuser} }"><i class="fas fa-film"></i>Movies</router-link></li>
+                  <li v-on:click.prevent="toggleNav"><router-link :to="{ path: 'home', params: {currentuser} }"><i class="fas fa-home"></i>Home</router-link></li>
+                  <li v-on:click.prevent="toggleNav"><router-link :to="{ path: 'movies', params: {currentuser} }"><i class="fas fa-film"></i>Movies</router-link></li>
                   <li><i class="fas fa-tv"></i>Tv Shows</li>
                   <li><i class="fas fa-music"></i>Music</li>
               </ul>
