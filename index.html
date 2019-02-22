@@ -17,14 +17,29 @@
   <main id="app">
     <header >
       <img src="images/roku.svg" alt="Roku logo" width="90">
-      <nav class="main-nav">
-        <ul>
-          <!-- <li>Kids</li> -->            
-          <li v-if="auth"><i class="fas fa-user-circle"></i></li>
-          <!-- <li v-if="administrator"><i class="fas fa-cog"></i></li> -->
-          <li v-if="auth" v-on:click="logOut()"><i class="fas fa-power-off"></i></li>
+        
+      <nav class="menu" :class="{show : auth}">
+          <h2 class="hidden">Main Navigation</h2>
           
-        </ul>
+          <div v-on:click="toggleNav" class="ham-menu">
+              <i class="fas fa-bars"></i>
+          </div>
+          
+          <div class="nav-content" :class="{openNav : navTrue}">
+              <div v-on:click="toggleNav" class="exit"><i class="fas fa-times"></i></div>
+              <ul class="links">
+                  <!-- <li>Kids</li> -->            
+                  <li v-if="auth"><i class="fas fa-user-circle"></i>Account</li>
+                  <li class="settings" v-if="admin"><i class="fas fa-cog"></i>Settings</li>
+                  <li v-if="auth" v-on:click="logOut()"><i class="fas fa-sign-out-alt"></i>Logout</li>
+              </ul>
+              <div class="line"></div>
+              <ul class="content-type">
+                  <li><router-link :to="{ path: 'movies', params: {currentuser} }"><i class="fas fa-film"></i>Movies</router-link></li>
+                  <li><i class="fas fa-tv"></i>Tv Shows</li>
+                  <li><i class="fas fa-music"></i>Music</li>
+              </ul>
+          </div>
       </nav>
     </header>
     

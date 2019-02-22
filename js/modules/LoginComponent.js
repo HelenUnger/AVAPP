@@ -1,8 +1,9 @@
 export default{
     template: `
     <div class="login_form">
-    <h1>Welcome to Flashback Family!</h1>
+    <h1>Welcome to Flashback!</h1>
     <p>Login to continue your binge</p>
+    <div class="login-errors"></div>
         <form>
             <input v-model="input.username" type="text" id="name" placeholder="username" required>
             <input v-model="input.password" type="password" id="password" placeholder="password" required>
@@ -39,7 +40,8 @@ export default{
                 })
                 .then(res=>res.json())
                 .then(data =>{
-                    if (data == "Login Failed"){
+                    if (typeof data != "object"){
+                        console.warn(data);
                         console.log('login attempt failed');
                         return;
                     }else{

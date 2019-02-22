@@ -1,14 +1,32 @@
 .login_form{
     text-align: center;
     width: 100%;
-    form{
-        background-color: $nav-color;
-        width: 50%;
-        font-size: 1.5em;
-        margin: 0 auto;
-    }
-    input{
+    font-size: 1.2em;
+
+    .login-errors{
+        height: 50px;
+        width: 80%;
         display: block;
         margin: 10px auto;
+        background-color: transparent;
+        border-radius: 5px;
+    }
+
+    form{
+        background-color: $nav-color;
+        width: 80%;
+        margin: 10px auto;
+        padding: 5%;
+    }
+    input, button{
+        display: block;
+        margin: 10px auto;
+        font-size: 1em;
+    }
+    button{
+        background-color: rgb(116, 8, 189);
+        padding: 5px;
+        border-radius: 5px;
+        color: #fff;
     }
 }

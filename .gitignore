@@ -1,5 +1,6 @@
 node_modules
 .DS_Store
+.sass_cache
 *.psd
 *.ai
 *.xd
