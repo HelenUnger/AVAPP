@@ -5,7 +5,7 @@ export default {
         <h2>{{message}}</h2>
         <div class="movie-container">
             <div v-for="movie in movieList" class="movie-box" v-on:click="watchMovie(movie.id)">
-                <img src="./images/alice1951.jpg">
+                <img :src="'./images/' + movie.img">
                 <p>{{movie.title}}</p>
                 <p>{{movie.year}}</p>
             </div>

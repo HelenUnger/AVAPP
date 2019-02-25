@@ -167,6 +167,10 @@ header {
   text-align: center;
 }
 
+.movie-container .movie-box img {
+  max-width: 140px;
+}
+
 .watch-container {
   text-align: center;
 }
