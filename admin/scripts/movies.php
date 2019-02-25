@@ -23,6 +23,7 @@
             $mov['title'] = $result['mov_title'];
             $mov['year'] = $result['mov_year'];
             $mov['link'] = $result['mov_link'];
+            $mov['img'] = $result['mov_img'];
             // $movies['genre'] = $result['genre_name'];
             $movies[] = $mov;
         }
