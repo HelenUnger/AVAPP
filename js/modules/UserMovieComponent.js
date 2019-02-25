@@ -23,6 +23,9 @@ export default {
 
     created: function() {
         this.currentuser = this.$parent.currentuser;
+        if(this.currentuser.length == 0){
+            this.$router.replace({name: 'users'});
+        }
         this.getAllMovies();
     },
 

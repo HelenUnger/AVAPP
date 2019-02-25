@@ -16,13 +16,13 @@ export default {
     created: function() {
         console.log('params:', this.$route.params);
 
-        if (this.$parent.currentuser.admin == false){
+        // if (this.$parent.currentuser.admin == false){
             if (this.currentuser.admin == 1){
                 this.$parent.admin = true;
             }else{
                 this.$parent.admin = false;
             }
-        }
+        // }
 
         this.$parent.currentuser = this.currentuser;
     },
