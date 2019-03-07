@@ -38,5 +38,5 @@
   }
   /* :checked */
   .tab input:checked ~ .tab-content {
-    max-height: 100vh;
+    max-height: 100vh !important;
   }

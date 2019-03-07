@@ -9,16 +9,15 @@ export default {
 
         <div>
         <h2>Seasons</h2>
-            <div class="tab" v-for="season in seasons">
-            <input id="tab-one" type="checkbox" name="tabs">
-            <label for="tab-one">{{season.season_title}}</label>
-                <div class="tab-content" v-for="sho in show">
-                    <p>Episode {{sho.episode_id}}</p>
-                    <p>{{sho.episode_title}}</p>
+            <div class="tab" v-for="sho in show">
+                <input id="tab-one" type="checkbox" name="tabs">
+                <label for="tab-one">{{sho.season_title}}</label>
+                <div class="tab-content" v-for="episode in JSON.parse(sho.episodes)" v-on:click="changeSrc(episode.link)">
+                    <p>Episode {{episode.title}}</p>
                 </div>
             </div>
         </div>
-
+ 
     </div>
     `,
 
@@ -35,12 +34,8 @@ export default {
     },
 
     methods: {
-        logClicked(e) {
-            console.log("trying shorthand click");
-            this.vidActive = !this.vidActive;
-
-            let vid = document.querySelector('video');
-            vid.muted = !vid.muted;
+        changeSrc(src){
+            console.log(src);
         }
     }
 }

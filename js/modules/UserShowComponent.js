@@ -52,15 +52,15 @@ export default {
 
         watchShow(id){
 
-            this.selectedShow = this.showList.filter(show=>show.id == id);
+            // this.selectedShow = this.showList.filter(show=>show.id == id);
 
             let url = `./admin/scripts/shows.php?singleShow=${id}`;
 
             fetch(url)
                 .then(res => res.json())
                 .then(data => {
-                    this.seasons = data;
-                    this.$router.push({ name: "watchShow", params: {show: this.selectedshow, seasons: this.seasons} });
+                    this.selectedshow = data;
+                    this.$router.push({ name: "watchShow", params: {show: this.selectedshow} });
                 })
             .catch(function(error) {
                 console.error(error);
