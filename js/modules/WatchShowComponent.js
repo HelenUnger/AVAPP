@@ -10,8 +10,8 @@ export default {
         <div>
         <h2>Seasons</h2>
             <div class="tab" v-for="sho in show">
-                <input id="tab-one" type="checkbox" name="tabs">
-                <label for="tab-one">{{sho.season_title}}</label>
+                <input :id="sho.season_title" type="checkbox" name="tabs">
+                <label :for="sho.season_title">{{sho.season_title}}</label>
                 <div class="tab-content" v-for="episode in JSON.parse(sho.episodes)" v-on:click="changeSrc(episode.link)">
                     <p>Episode {{episode.title}}</p>
                 </div>
