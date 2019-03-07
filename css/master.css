@@ -92,12 +92,16 @@ header {
   background-color: #EF3C95;
 }
 
+.links li:nth-last-of-type(2):hover {
+  background-color: #31C82C;
+}
+
 .links li:nth-last-of-type(1):hover {
-  background-color: #b34edb;
+  background-color: #199FE5;
 }
 
 .links .settings:hover {
-  background-color: orange;
+  background-color: #F6DB2B;
 }
 
 .openNav {
@@ -105,7 +109,7 @@ header {
 }
 
 .content-type li:nth-of-type(1):hover {
-  background-color: #31C82C;
+  background-color: #EF3C95;
 }
 
 .content-type li:nth-of-type(2):hover {
@@ -113,6 +117,10 @@ header {
 }
 
 .content-type li:nth-of-type(3):hover {
+  background-color: #31C82C;
+}
+
+.content-type li:nth-of-type(4):hover {
   background-color: #199FE5;
 }
 
@@ -229,5 +237,54 @@ footer .social {
 
 footer .social li {
   margin: 0 10%;
+}
+
+.tab {
+  position: relative;
+  margin-bottom: 1px;
+  width: 100%;
+  color: #fff;
+  overflow: hidden;
+}
+
+.tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.tab label {
+  position: relative;
+  display: block;
+  padding: 0 0 0 1em;
+  background: #16a085;
+  font-weight: bold;
+  line-height: 3;
+  cursor: pointer;
+}
+
+.blue label {
+  background: #2980b9;
+}
+
+.tab-content {
+  max-height: 0;
+  overflow: hidden;
+  background: #1abc9c;
+  -webkit-transition: max-height .35s;
+  transition: max-height .35s;
+}
+
+.blue .tab-content {
+  background: #3498db;
+}
+
+.tab-content p {
+  margin: 1em;
+}
+
+/* :checked */
+.tab input:checked ~ .tab-content {
+  max-height: 100vh;
 }
 /*# sourceMappingURL=master.css.map */
