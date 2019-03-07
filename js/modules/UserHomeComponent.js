@@ -3,13 +3,17 @@ export default {
 
     template: `
     <div class="container">
-        <h2 v-if="this.$parent.currentuser">{{message}} {{this.$parent.currentuser.username}}</h2>
+        <h2 v-if="this.$parent.currentuser">Welcome {{this.$parent.currentuser.username}}</h2>
+        <p>What do you want to do?</p>
+        <div v-on:click="redirectUser('movies')"><p>Movies</p></div>
+        <div v-on:click="redirectUser('shows')"><p>Tv Shows</p></div>
+        <div v-on:click="redirectUser('music')"><p>Music</p></div>
     </div>
     `,
 
     data() {
         return {
-            message: "Welcome"
+            
         }
     },
 
@@ -34,6 +38,16 @@ export default {
 
             let vid = document.querySelector('video');
             vid.muted = !vid.muted;
+        },
+
+        redirectUser(place){
+            if(place == "movies"){
+                this.$router.replace({name: 'movies'});
+            }else if(place == "shows"){
+                this.$router.replace({name: 'shows'});
+            }else if(place == "music"){
+                this.$router.replace({name: 'movies'});
+            }
         }
     }
 }

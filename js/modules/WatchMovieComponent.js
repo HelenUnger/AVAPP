@@ -3,10 +3,9 @@ export default {
 
     template: `
     <div class="watch-container">
-        <h2>{{movie[0].title}}</h2>
-        <p>{{movie[0].year}}</p>
-        <iframe :src="movie[0].link" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-        </iframe>
+        <h2>{{movie[0].movie_title}}</h2>
+        <p>{{movie[0].movie_year}}</p>
+        <iframe :src="movie[0].movie_link" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     `,
 

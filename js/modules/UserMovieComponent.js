@@ -53,7 +53,7 @@ export default {
             console.log(id);
             // this.selectedMovie = e;
             this.selectedMovie = this.movieList.filter(mov=>mov.id == id);
-            this.$router.push({ name: "watch", params: {movie: this.selectedMovie} });
+            this.$router.push({ name: "watchMovie", params: {movie: this.selectedMovie} });
         }
 
     }

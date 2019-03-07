@@ -6,7 +6,9 @@
     import UsersComponent from './modules/UsersComponent.js';
     import UserHomeComponent from './modules/UserHomeComponent';
     import UserMovieComponent from './modules/UserMovieComponent';
-    import WatchComponent from './modules/WatchComponent';
+    import UserShowComponent from './modules/UserShowComponent';
+    import WatchMovieComponent from './modules/WatchMovieComponent';
+    import WatchShowComponent from './modules/WatchShowComponent';
 
     const routes = [
         {path: '/', redirect: {name: 'login'} },
@@ -14,7 +16,9 @@
         {path: '/users', name: 'users', component: UsersComponent },
         {path: '/home', name: "home", component: UserHomeComponent, props: true },
         {path: '/movies', name: "movies", component: UserMovieComponent, props: true },
-        {path: '/watch', name: "watch", component: WatchComponent, props: true}
+        {path: '/shows', name: "shows", component: UserShowComponent, props: true },
+        {path: '/watchMovie', name: "watchMovie", component: WatchMovieComponent, props: true},
+        {path: '/watchShow', name: "watchShow", component: WatchShowComponent, props: true}
     ]
 
     const router = new VueRouter({
