@@ -3,8 +3,9 @@ export default {
     template: `
     <div class="container">
         <h2>{{message}}</h2>
+        <input type="text" v-model="search" placeholder="Search title.."/>
         <div class="movie-container">
-            <div v-for="movie in movieList" class="movie-box" v-on:click="watchMovie(movie.id)">
+            <div v-for="movie in searchMovie" class="movie-box" v-on:click="watchMovie(movie.id)">
                 <img :src="'./images/' + movie.img">
                 <p>{{movie.title}}</p>
                 <p>{{movie.year}}</p>
@@ -15,6 +16,7 @@ export default {
 
     data() {
         return {
+            search: '',
             message: "Movies",
             movieList: [],
             currentuser: []
@@ -27,6 +29,12 @@ export default {
             this.$router.replace({name: 'users'});
         }
         this.getAllMovies();
+    },
+
+    computed: {
+        searchMovie() {
+            return this.movieList.filter(mov => mov.title.toLowerCase().includes(this.search.toLowerCase()))
+        }
     },
 
     methods: {
