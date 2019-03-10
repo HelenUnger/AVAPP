@@ -37,7 +37,7 @@
               <ul class="content-type">
                   <li v-on:click.prevent="toggleNav"><router-link :to="{ path: 'home', params: {currentuser} }"><i class="fas fa-home"></i>Home</router-link></li>
                   <li v-on:click.prevent="toggleNav"><router-link :to="{ path: 'movies', params: {currentuser} }"><i class="fas fa-film"></i>Movies</router-link></li>
-                  <li><i class="fas fa-tv"></i>Tv Shows</li>
+                  <li v-on:click.prevent="toggleNav"><router-link :to="{ path: 'shows', params: {currentuser} }"><i class="fas fa-tv"></i>Shows</router-link></li>
                   <li><i class="fas fa-music"></i>Music</li>
               </ul>
           </div>

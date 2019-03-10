@@ -239,6 +239,10 @@ footer .social li {
   margin: 0 10%;
 }
 
+video {
+  max-width: 90vw;
+}
+
 .tab {
   position: relative;
   margin-bottom: 1px;

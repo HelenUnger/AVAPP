@@ -5,7 +5,9 @@ export default {
     <div class="watch-container">
         <h2>{{show[0].show_title}}</h2>
         <p>{{show[0].show_year}}</p>
-        <iframe :src="show[0].show_link" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <video autoplay controls playsinline preload>
+            <source :src="'video/' + show[0].show_link" type="video/mp4">
+        </video>
 
         <div>
         <h2>Seasons</h2>
@@ -17,7 +19,6 @@ export default {
                 </div>
             </div>
         </div>
- 
     </div>
     `,
 
@@ -34,8 +35,9 @@ export default {
     },
 
     methods: {
-        changeSrc(src){
-            console.log(src);
+        changeSrc(source){
+            console.log(source);
+            document.querySelector('source').setAttribute.src = source;
         }
     }
 }
