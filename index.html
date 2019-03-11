@@ -34,13 +34,17 @@
                   <li  v-on:click="toggleNav(); logOut();"><i class="fas fa-sign-out-alt"></i>Logout</li>
               </ul>
               <div class="line"></div>
-              <ul class="content-type">
-                  <li v-on:click.prevent="toggleNav"><router-link :to="{ path: 'home', params: {currentuser} }"><i class="fas fa-home"></i>Home</router-link></li>
-                  <li v-on:click.prevent="toggleNav"><router-link :to="{ path: 'movies', params: {currentuser} }"><i class="fas fa-film"></i>Movies</router-link></li>
-                  <li v-on:click.prevent="toggleNav"><router-link :to="{ path: 'shows', params: {currentuser} }"><i class="fas fa-tv"></i>Shows</router-link></li>
-                  <li><i class="fas fa-music"></i>Music</li>
-              </ul>
           </div>
+
+          <div class="content-icons">
+            <ul class="content-type">
+                <li><router-link :to="{ path: 'home', params: {currentuser} }"><i class="fas fa-home"></i></router-link></li>
+                <li><router-link :to="{ path: 'movies', params: {currentuser} }"><i class="fas fa-film"></i></router-link></li>
+                <li><router-link :to="{ path: 'shows', params: {currentuser} }"><i class="fas fa-tv"></i></router-link></li>
+                <li><i class="fas fa-music"></i></li>
+            </ul>
+          </div>
+
       </nav>
     </header>
     

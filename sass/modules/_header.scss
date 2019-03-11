@@ -79,17 +79,27 @@ header {
 }
 
 .content-type{
-	li:nth-of-type(1):hover{
-		background-color: $pink;
-	}
-	li:nth-of-type(2):hover{
-		background-color: $yellow;
-	}
-	li:nth-of-type(3):hover{
-		background-color: $green;
-	}
-	li:nth-of-type(4):hover{
-		background-color: $blue;
+	margin-top: 18px;
+	background-color: #dbdbdb;
+	display: flex;
+	justify-content: center;
+	font-size: 1.2em;
+	li{
+		font-size: 1.5em;
+		display: inline;
+		padding: 5px 7%;		
+		&:nth-of-type(1):hover{
+			background-color: $pink;
+		}
+		&:nth-of-type(2):hover{
+			background-color: $yellow;
+		}
+		&:nth-of-type(3):hover{
+			background-color: $green;
+		}
+		&:nth-of-type(4):hover{
+			background-color: $blue;
+		}
 	}
 }
 
