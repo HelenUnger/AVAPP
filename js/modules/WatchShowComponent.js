@@ -3,11 +3,12 @@ export default {
 
     template: `
     <div class="watch-container">
+
+        <a @click="$router.go(-1)">back</a>
+
         <h2>{{show[0].show_title}}</h2>
         <p>{{show[0].show_year}}</p>
-        <video autoplay controls playsinline preload>
-            <source :src="'video/' + show[0].show_link" type="video/mp4">
-        </video>
+        <video autoplay controls playsinline :src="'video/' + show[0].show_link"></video>
 
         <div>
         <h2>Seasons</h2>
@@ -37,7 +38,9 @@ export default {
     methods: {
         changeSrc(source){
             console.log(source);
-            document.querySelector('source').setAttribute.src = source;
+            document.querySelector('video').setAttribute.src = "video/" + source;
+            this.show[0].show_link = source;
+
         }
     }
 }

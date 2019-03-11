@@ -3,6 +3,8 @@ export default {
 
     template: `
     <div class="watch-container">
+    <a @click="$router.go(-1)">back</a>
+
         <h2>{{movie[0].title}}</h2>
         <p>{{movie[0].year}}</p>
         <video autoplay controls playsinline preload>
