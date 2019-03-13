@@ -14,7 +14,7 @@ export default {
         </div>
         </div>
 
-        <audio controls :src="'audio/' + album[0].song_src"></audio>
+        <audio controls :src="'audio/' + song"></audio>
 
         <div class="songs">
         <ul>
@@ -29,20 +29,22 @@ export default {
 
     data() {
         return {
-            message: "Watch",
-            currentuser: []
+            message: "Listen",
+            currentuser: [],
+            song: ''
         }
     },
 
     created: function() {
         this.currentuser = this.$parent.currentuser;
         console.log('params:', this.$route.params);
+        this.song =  this.album[0].song_src;
     },
 
     methods:{
         changeSrc(source){
             document.querySelector('audio').setAttribute.src = "audio/" + source;
-            this.album[0].song_src = source;
+            this.song = source;
         }
     }
 }
