@@ -59,25 +59,5 @@
         }
 
         echo json_encode($episodes, JSON_PRETTY_PRINT);
-
-
-        // //gets all seasons
-        // $season_query = 'SELECT * FROM tbl_season WHERE :showID = tbl_season.show_id';
-
-        // $getSeasons = $pdo->prepare($season_query);
-        // $getSeasons->execute(
-        //     array(
-        //         ':showID'=>$id
-        //     )
-        // );
-
-        // $seasons = array();
-        // while($rslt = $getSeasons->fetch(PDO::FETCH_ASSOC)) {
-        //     $season = array();
-        //     $season = $rslt;
-        //     $seasons[] = $season;
-        // }
-
-        // echo json_encode($seasons);
     }
 ?>

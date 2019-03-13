@@ -25,14 +25,4 @@ export default {
         this.currentuser = this.$parent.currentuser;
         console.log('params:', this.$route.params);
     },
-
-    methods: {
-        logClicked(e) {
-            console.log("trying shorthand click");
-            this.vidActive = !this.vidActive;
-
-            let vid = document.querySelector('video');
-            vid.muted = !vid.muted;
-        }
-    }
 }

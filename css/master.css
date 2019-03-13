@@ -352,4 +352,52 @@ video {
 .tab input:checked ~ .tab-content {
   max-height: 50px !important;
 }
+
+.back {
+  position: absolute;
+  top: 100px;
+  left: 0;
+}
+
+.listen-container .audio-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.listen-container .half {
+  padding: 0 20px;
+  width: 50%;
+}
+
+.listen-container audio {
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.listen-container .songs {
+  padding: 50px;
+}
+
+.listen-container .songs li {
+  list-style: none;
+  text-align: left;
+  padding: 10px;
+  font-size: 1.2em;
+  border-top: 1px solid #000;
+}
+
+@media screen and (min-width: 700px) {
+  .listen-container .half {
+    width: auto;
+  }
+}
 /*# sourceMappingURL=master.css.map */
