@@ -46,7 +46,7 @@ export default {
             }else if(place == "shows"){
                 this.$router.replace({name: 'shows'});
             }else if(place == "music"){
-                this.$router.replace({name: 'movies'});
+                this.$router.replace({name: 'music'});
             }
         }
     }

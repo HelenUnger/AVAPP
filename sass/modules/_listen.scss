@@ -1,0 +1,38 @@
+.listen-container{
+    .audio-header{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+    }
+    .half{
+        padding: 0 20px;
+        width: 50%;
+    }
+
+    audio{
+        display: block;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .songs{
+        padding: 50px;
+        li{
+            list-style: none;
+            text-align: left;
+            padding: 10px;
+            font-size: 1.2em;
+            border-top: 1px solid #000;
+        }
+    }
+}
+
+@media screen and (min-width: 700px){
+    .listen-container{
+        .half{
+            width: auto;
+        }
+    }
+}
