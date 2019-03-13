@@ -3,7 +3,7 @@ export default {
     template: `
     <div class="container">
         <h2>{{message}}</h2>
-        <input type="text" v-model="search" placeholder="Search title.."/>
+        <input type="text" id="search" v-model="search" placeholder="Search title.."/>
         <div class="movie-container">
             <div v-for="show in searchShow" class="movie-box" v-on:click="watchShow(show.id)">
                 <img :src="'./images/' + show.img">

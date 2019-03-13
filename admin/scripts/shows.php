@@ -38,7 +38,7 @@
         //gets all episodes
         //$query = 'SELECT JSON_OBJECT( "show", tbl_show.show_title, "season", tbl_season.season_title, "episodes", json_arrayagg( JSON_OBJECT( "title", tbl_episode.episode_title, "link", tbl_episode.episode_link ) ) ) FROM tbl_show, tbl_season, tbl_episode WHERE :showID = tbl_show.show_id AND tbl_show.show_id = tbl_season.show_id AND tbl_season.season_id = tbl_episode.season_id GROUP BY tbl_season.season_title';
 
-        $query ='SELECT tbl_show.show_title, tbl_show.show_year, tbl_season.season_title, json_arrayagg( JSON_OBJECT( "title", tbl_episode.episode_title, "link", tbl_episode.episode_link ) ) AS "episodes" FROM tbl_show, tbl_season, tbl_episode WHERE :showID = tbl_show.show_id AND tbl_show.show_id = tbl_season.show_id AND tbl_season.season_id = tbl_episode.season_id GROUP BY tbl_season.season_title';
+        $query ='SELECT tbl_show.show_title, tbl_show.show_link, tbl_show.show_year, tbl_season.season_title, json_arrayagg( JSON_OBJECT( "title", tbl_episode.episode_title, "link", tbl_episode.episode_link ) ) AS "episodes" FROM tbl_show, tbl_season, tbl_episode WHERE :showID = tbl_show.show_id AND tbl_show.show_id = tbl_season.show_id AND tbl_season.season_id = tbl_episode.season_id GROUP BY tbl_season.season_title';
 
         // SELECT tbl_show.*, tbl_season.*, JSON_ARRAYAGG(JSON_OBJECT( tbl_episode.episode_title, tbl_episode.episode_link )) AS "episodes" FROM tbl_show, tbl_season, tbl_episode WHERE 1 = tbl_show.show_id AND tbl_show.show_id = tbl_season.show_id AND tbl_season.season_id = tbl_episode.season_id GROUP BY tbl_season.season_title
 

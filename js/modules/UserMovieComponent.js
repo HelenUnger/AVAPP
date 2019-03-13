@@ -3,12 +3,14 @@ export default {
     template: `
     <div class="container">
         <h2>{{message}}</h2>
-        <input type="text" v-model="search" placeholder="Search title.."/>
+        <input type="text" id="search" v-model="search" placeholder="Search title.."/>
         <div class="movie-container">
             <div v-for="movie in searchMovie" class="movie-box" v-on:click="watchMovie(movie.id)">
                 <img :src="'./images/' + movie.img">
+                <div class="details">
                 <p>{{movie.title}}</p>
                 <p>{{movie.year}}</p>
+                </div>
             </div>
         </div>
     </div>

@@ -16,8 +16,13 @@ body {
 }
 
 .content {
-  margin-top: 70px;
+  margin-top: 100px;
   margin-bottom: 80px;
+}
+
+.content h2 {
+  padding: 5px 0;
+  font-size: 2em;
 }
 
 .hidden {
@@ -108,6 +113,24 @@ header {
   right: 0;
 }
 
+.content-type {
+  margin-top: 18px;
+  background-color: #dbdbdb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.2em;
+}
+
+.content-type li {
+  font-size: 1.5em;
+  display: inline;
+  padding: 5px 7%;
+}
+
 .content-type li:nth-of-type(1):hover {
   background-color: #EF3C95;
 }
@@ -173,10 +196,47 @@ header {
 .movie-container .movie-box {
   max-width: 140px;
   text-align: center;
+  position: relative;
+}
+
+.movie-container .movie-box:hover .details {
+  opacity: .8 !important;
 }
 
 .movie-container .movie-box img {
   max-width: 140px;
+}
+
+.movie-container .details {
+  position: absolute;
+  bottom: 0;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 3px;
+  opacity: 0;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.movie-container .details p {
+  display: block;
+  width: 75%;
+}
+
+#search {
+  position: absolute;
+  top: 111px;
+  right: 10px;
+  font-size: 1.2em;
 }
 
 .watch-container {
@@ -185,6 +245,7 @@ header {
 
 .comp-container h1 {
   text-align: center;
+  padding: 10px;
 }
 
 .comp-container .users-container {
@@ -239,6 +300,10 @@ footer .social li {
   margin: 0 10%;
 }
 
+video {
+  max-width: 90vw;
+}
+
 .tab {
   position: relative;
   margin-bottom: 1px;
@@ -285,6 +350,6 @@ footer .social li {
 
 /* :checked */
 .tab input:checked ~ .tab-content {
-  max-height: 100vh !important;
+  max-height: 50px !important;
 }
 /*# sourceMappingURL=master.css.map */
