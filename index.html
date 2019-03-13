@@ -38,10 +38,10 @@
 
           <div class="content-icons">
             <ul class="content-type">
-                <li><router-link :to="{ path: 'home', params: {currentuser} }"><i class="fas fa-home"></i></router-link></li>
-                <li><router-link :to="{ path: 'movies', params: {currentuser} }"><i class="fas fa-film"></i></router-link></li>
-                <li><router-link :to="{ path: 'shows', params: {currentuser} }"><i class="fas fa-tv"></i></router-link></li>
-                <li><router-link :to="{ path: 'music', params: {currentuser} }"><i class="fas fa-music"></i></router-link></li>
+                <router-link :to="{ path: 'home', params: {currentuser} }"><i class="fas fa-home"></i></router-link>
+                <router-link :to="{ path: 'movies', params: {currentuser} }"><i class="fas fa-film"></i></router-link>
+                <router-link :to="{ path: 'shows', params: {currentuser} }"><i class="fas fa-tv"></i></router-link>
+                <router-link :to="{ path: 'music', params: {currentuser} }"><i class="fas fa-music"></i></router-link>
             </ul>
           </div>
 

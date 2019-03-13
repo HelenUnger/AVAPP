@@ -125,25 +125,25 @@ header {
   font-size: 1.2em;
 }
 
-.content-type li {
+.content-type a {
   font-size: 1.5em;
   display: inline;
   padding: 5px 7%;
 }
 
-.content-type li:nth-of-type(1):hover {
+.content-type a:nth-of-type(1):hover {
   background-color: #EF3C95;
 }
 
-.content-type li:nth-of-type(2):hover {
+.content-type a:nth-of-type(2):hover {
   background-color: #F6DB2B;
 }
 
-.content-type li:nth-of-type(3):hover {
+.content-type a:nth-of-type(3):hover {
   background-color: #31C82C;
 }
 
-.content-type li:nth-of-type(4):hover {
+.content-type a:nth-of-type(4):hover {
   background-color: #199FE5;
 }
 
