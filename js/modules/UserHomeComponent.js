@@ -32,14 +32,6 @@ export default {
     },
 
     methods: {
-        logClicked(e) {
-            console.log("trying shorthand click");
-            this.vidActive = !this.vidActive;
-
-            let vid = document.querySelector('video');
-            vid.muted = !vid.muted;
-        },
-
         redirectUser(place){
             if(place == "movies"){
                 this.$router.replace({name: 'movies'});

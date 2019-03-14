@@ -34,11 +34,20 @@
 
 #search{
     position: absolute;
-    top: 111px;
+    top: 116px;
     right: 10px;
-    font-size: 1.2em;
+    font-size: .8em;
 }
 
 .watch-container{
     text-align: center;
+}
+
+@media screen and (min-width: 700px){
+    .movie-container{
+        justify-content: flex-start;
+        .movie-box{
+            margin: 5px;
+        }
+    }
 }

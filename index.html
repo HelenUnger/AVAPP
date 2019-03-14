@@ -29,7 +29,7 @@
               <div v-on:click="toggleNav" class="exit"><i class="fas fa-times"></i></div>
               <ul class="links">       
                   <li v-on:click.prevent="toggleNav"><i class="fas fa-user-circle"></i>Account</li>
-                  <li class="settings" v-if="admin" v-on:click.prevent="toggleNav"><i class="fas fa-cog"></i>Settings</li>
+                  <li class="settings" v-if="admin" v-on:click.prevent="toggleNav"></i><router-link :to="{ path: 'settings' }"><i class="fas fa-cog"></i>Settings</router-link></li>
                   <li v-on:click.prevent="toggleNav"><router-link :to="{ path: 'users' }"><i class="fas fa-user-circle"></i>Switch Users</router-link></li>
                   <li  v-on:click="toggleNav(); logOut();"><i class="fas fa-sign-out-alt"></i>Logout</li>
               </ul>
