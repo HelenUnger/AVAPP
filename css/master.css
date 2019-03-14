@@ -29,6 +29,26 @@ body {
   display: none !important;
 }
 
+.home {
+  text-align: center;
+}
+
+.home .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-top: 50px;
+}
+
+.home svg {
+  font-size: 3em;
+}
+
 a {
   color: #000;
   text-decoration: none;
@@ -339,26 +359,19 @@ video {
   position: relative;
   display: block;
   padding: 0 0 0 1em;
-  background: #16a085;
+  background: #199FE5;
   font-weight: bold;
   line-height: 3;
   cursor: pointer;
 }
 
-.blue label {
-  background: #2980b9;
-}
-
 .tab-content {
   max-height: 0;
   overflow: hidden;
-  background: #1abc9c;
+  background: #4fbff3;
+  color: #000;
   -webkit-transition: max-height .35s;
   transition: max-height .35s;
-}
-
-.blue .tab-content {
-  background: #3498db;
 }
 
 .tab-content p {

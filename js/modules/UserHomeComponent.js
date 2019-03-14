@@ -2,12 +2,23 @@ export default {
     props: ['currentuser'],
 
     template: `
-    <div class="container">
+    <div class="home container">
         <h2 v-if="this.$parent.currentuser">Welcome {{this.$parent.currentuser.username}}</h2>
         <p>What do you want to do?</p>
-        <div v-on:click="redirectUser('movies')"><p>Movies</p></div>
-        <div v-on:click="redirectUser('shows')"><p>Tv Shows</p></div>
-        <div v-on:click="redirectUser('music')"><p>Music</p></div>
+        <div class="icons">
+            <div v-on:click="redirectUser('movies')">
+                <i class="fas fa-film"></i>
+                <p>Movies</p>
+            </div>
+            <div v-on:click="redirectUser('shows')">
+                <i class="fas fa-tv"></i>
+                <p>Tv Shows</p>
+            </div>
+            <div v-on:click="redirectUser('music')">
+                <i class="fas fa-music"></i>
+                <p>Music</p>
+            </div>
+        </div>
     </div>
     `,
 
