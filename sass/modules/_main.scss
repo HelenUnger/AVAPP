@@ -20,3 +20,16 @@ body {
 .hidden{
 	display: none !important;
 }
+
+.home{
+	text-align: center;
+	.icons{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		padding-top: 50px;
+	}
+	svg{
+		font-size: 3em;
+	}
+}
