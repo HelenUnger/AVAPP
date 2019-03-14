@@ -11,6 +11,9 @@
     import WatchMovieComponent from './modules/WatchMovieComponent';
     import WatchShowComponent from './modules/WatchShowComponent';
     import ListenComponent from './modules/ListenComponent';
+    import AdminSettingsComponent from './modules/AdminSettingsComponent';
+    import AdminEditComponent from './modules/AdminEditComponent';
+    import AdminNewComponent from './modules/AdminNewComponent';
 
     const routes = [
         {path: '/', redirect: {name: 'login'} },
@@ -22,7 +25,10 @@
         {path: '/music', name: "music", component: UserMusicComponent, props: true },
         {path: '/watchMovie', name: "watchMovie", component: WatchMovieComponent, props: true},
         {path: '/watchShow', name: "watchShow", component: WatchShowComponent, props: true},
-        {path: '/listen', name: "listen", component: ListenComponent, props: true}
+        {path: '/listen', name: "listen", component: ListenComponent, props: true},
+        {path: '/settings', name: "settings", component: AdminSettingsComponent, props: true},
+        {path: '/editUser', name: "edit", component: AdminEditComponent, props: true},
+        {path: '/newUser', name: "new", component: AdminNewComponent}
     ]
 
     const router = new VueRouter({
