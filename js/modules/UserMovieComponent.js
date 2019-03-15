@@ -3,9 +3,14 @@ export default {
     template: `
     <div class="container">
         <h2>{{message}}</h2>
-        <input type="text" id="search" v-model="search" placeholder="Search title.."/>
+        <div class="filters">
+        <ul>
+        <li v-for="genre in genres" v-on:click="filterGenres" :data-type="genre.genre_id">{{genre.genre_name}}</li>
+        <li v-on:click="getAllMovies" >All</li>
+        </ul>
+        </div>
         <div class="movie-container">
-            <div v-for="movie in searchMovie" class="movie-box" v-on:click="watchMovie(movie.id)">
+            <div v-for="movie in filteredList" class="movie-box" v-on:click="watchMovie(movie.id)">
                 <img :src="'./images/' + movie.img">
                 <div class="details">
                 <p>{{movie.title}}</p>
@@ -18,10 +23,11 @@ export default {
 
     data() {
         return {
-            search: '',
             message: "Movies",
             movieList: [],
-            currentuser: []
+            filteredList: [],
+            currentuser: [],
+            genres: []
         }
     },
 
@@ -31,12 +37,7 @@ export default {
             this.$router.replace({name: 'users'});
         }
         this.getAllMovies();
-    },
-
-    computed: {
-        searchMovie() {
-            return this.movieList.filter(mov => mov.title.toLowerCase().includes(this.search.toLowerCase()))
-        }
+        this.getAllGenres();
     },
 
     methods: {
@@ -45,7 +46,25 @@ export default {
 
             fetch(url)
                 .then(res => res.json())
-                .then(data => {this.movieList = data})
+                .then(data => {this.movieList = data;
+                this.filteredList = data;})
+            .catch(function(error) {
+                console.error(error);
+            });
+        },
+
+        filterGenres(e){
+            let id = e.currentTarget.dataset.type;
+            let currentData = this.movieList.filter(movie=>movie.genreID == id);
+            this.filteredList = currentData;
+        },
+
+        getAllGenres(){
+            let url = `./admin/scripts/genre.php?getgenres=true`;
+
+            fetch(url)
+                .then(res => res.json())
+                .then(data => {this.genres = data})
             .catch(function(error) {
                 console.error(error);
             });

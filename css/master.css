@@ -258,6 +258,26 @@ header {
   width: 75%;
 }
 
+.filters ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.filters ul li {
+  list-style: none;
+  padding: 10px;
+}
+
+.filters ul li:hover {
+  background-color: #F6DB2B;
+}
+
 #search {
   position: absolute;
   top: 116px;
@@ -305,6 +325,12 @@ header {
 
 .comp-container .user img {
   max-width: 100%;
+}
+
+@media screen and (min-width: 700px) {
+  .comp-container .user {
+    width: 20%;
+  }
 }
 
 footer {

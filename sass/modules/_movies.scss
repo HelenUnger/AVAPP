@@ -32,6 +32,19 @@
     }
 }
 
+.filters ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    li{
+        list-style: none;
+        padding: 10px;
+        &:hover{
+            background-color: $yellow;
+        }
+    }
+}
+
 #search{
     position: absolute;
     top: 116px;
