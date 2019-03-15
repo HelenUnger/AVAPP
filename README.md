@@ -19,3 +19,7 @@ To set the app up on your local host, clone the repo into www/htdocs, insert the
 ## Acknowledgments
 
 * Thankyou Trevor for teaching most of this.
+
+### Log in credentials
+username: master
+password: pass
